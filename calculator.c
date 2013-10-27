@@ -1,10 +1,9 @@
 #include<stdio.h>
-#include<string.h>
 
-double add(double a, double b);
-double sub(double a, double b);
-double mul(double a, double b);
-double div(double a, double b);
+double add(double m, double n);
+double sub(double m, double n);
+double mul(double m, double n);
+double div(double m, double n);
 
 int main ()
 {
@@ -21,14 +20,14 @@ int main ()
 	while (method < 1 || method > 4){
 		printf ("attention pleas: number < 5 or number > 1\n");
 		printf ("1 : add  2 : subrtact 3 : multiply 4 : division\n");
-		scanf("%d" , &method);		
+		scanf("%d" , method);		
 	};
 
 	printf("type the first number!");
-	scanf("%f" , &first);
+	scanf("%d" , &first);
 
 	printf("type the second number!");
-	scanf("%f" , &second);
+	scanf("%d" , &second);
 
 	if (second == 0){
 		return (1);
@@ -44,9 +43,11 @@ int main ()
 			break;
 		case 4 : result = div(first, second);
 			break;
+		default:
+			return (1);
 	}
 
-	printf("the result is %l\n" , result);
+	printf("the result is %d\n" , result);
 
 	return (0);
 

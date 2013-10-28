@@ -1,15 +1,15 @@
 #include<stdio.h>
 
-double add(double m, double n);
-double sub(double m, double n);
-double mul(double m, double n);
-double div(double m, double n);
+float add(float m, float n);
+float sub(float m, float n);
+float mul(float m, float n);
+float div(float m, float n);
 
 int main ()
 {
-	double first = 0, second = 0;
+	float first, second ;
 	int method = 0;
-	double result = 0;
+	float result = 0;
 
 	printf ("\n INSTRUCTION\n\n");
 	printf (" First, choose the method\n Second, choose the first and second number\n Third..... Enjoy the result :) \n\n");
@@ -20,14 +20,14 @@ int main ()
 	while (method < 1 || method > 4){
 		printf ("attention pleas: number < 5 or number > 1\n");
 		printf ("1 : add  2 : subrtact 3 : multiply 4 : division\n");
-		scanf("%d" , method);		
+		scanf("%d" , &method);		
 	};
 
 	printf("type the first number!");
-	scanf("%d" , &first);
+	scanf("%f" , &first);
 
 	printf("type the second number!");
-	scanf("%d" , &second);
+	scanf("%f" , &second);
 
 	if (second == 0){
 		return (1);
@@ -47,27 +47,27 @@ int main ()
 			return (1);
 	}
 
-	printf("the result is %d\n" , result);
+	printf("the result is %f\n" , result);
 
 	return (0);
 
 }
-	double add (double m, double n)
+	float add (float m, float n)
 	{
 		return (m+n);
-	}
+}
 
-	double sub (double m, double n)
+	float sub (float m, float n)
 	{
 		return (m-n);
 	}
 
-	double mul (double m, double n)
+	float mul (float m, float n)
 	{
 		return (m*n);
 	}
 
-	double div (double m, double n)
+	float div (float m, float n)
 	{
 		return (m/n);
 	}

@@ -71,7 +71,13 @@ int div (int m, int n)
 int get_method ()
 {
 	int i;
+
 	printf("which metheod do you like to use!\n");
+	printf("1 --> add\n");
+	printf("2 --> subtract\n");
+	printf("3 --> multiply\n");
+	printf("4 --> divide\n");
+
 	scanf("%d" , &i);
 
 	while (i < 1 || i >4) {
